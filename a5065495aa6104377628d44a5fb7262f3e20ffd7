@@ -1,0 +1,1 @@
+{"jobID":"01fb2ff2-76e6-d384-4b80-d4494dab750c","spec":{"type":"policy","cause":{"Message":"","User":"Manuel Hutter \u003cmanuel@hutter.io\u003e"},"spec":{"falco:helmrelease/falco":{"add":{"automated":"true"},"remove":{}}}},"result":null}
