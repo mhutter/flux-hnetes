@@ -1,0 +1,18 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: falco
+  namespace: falco
+spec:
+  releaseName: falco
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    name: falco
+    version: 0.7.6
+  values:
+    image:
+      registry: docker.io
+      repository: falcosecurity/falco
+      tag: 0.15.0
+      pullPolicy: IfNotPresent
