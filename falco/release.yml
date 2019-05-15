@@ -4,6 +4,8 @@ kind: HelmRelease
 metadata:
   name: falco
   namespace: falco
+  annotations:
+    flux.weave.works/automated: 'true'
 spec:
   releaseName: falco
   chart:
