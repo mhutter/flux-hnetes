@@ -1,0 +1,1 @@
+{"jobID":"045c6352-5d6d-fc7e-467c-928a5fb98545","spec":{"type":"policy","cause":{"Message":"","User":"Manuel Hutter \u003cmanuel@hutter.io\u003e"},"spec":{"sealed-secrets:helmrelease/sealed-secrets":{"add":{"automated":"true"},"remove":{}}}},"result":null}
