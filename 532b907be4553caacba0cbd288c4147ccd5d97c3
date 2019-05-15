@@ -1,0 +1,1 @@
+{"jobID":"1e95c942-4aad-cdce-7123-61cb4c8342c0","spec":{"type":"policy","cause":{"Message":"","User":"Manuel Hutter \u003cmanuel@hutter.io\u003e"},"spec":{"flux:helmrelease/flux":{"add":{"automated":"true"},"remove":{}}}},"result":null}
