@@ -16,5 +16,5 @@ spec:
     image:
       registry: docker.io
       repository: falcosecurity/falco
-      tag: 0.15.0
+      tag: dev
       pullPolicy: IfNotPresent
