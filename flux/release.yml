@@ -4,6 +4,8 @@ kind: HelmRelease
 metadata:
   name: flux
   namespace: flux
+  annotations:
+    flux.weave.works/automated: 'true'
 spec:
   releaseName: flux
   chart:
