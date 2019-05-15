@@ -6,6 +6,7 @@ metadata:
   namespace: falco
   annotations:
     flux.weave.works/automated: 'true'
+    flux.weave.works/tag.chart-image: 'glob:0.*'
 spec:
   releaseName: falco
   chart:
@@ -16,5 +17,5 @@ spec:
     image:
       registry: docker.io
       repository: falcosecurity/falco
-      tag: dev
+      tag: 0.15.0
       pullPolicy: IfNotPresent
