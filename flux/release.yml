@@ -3,7 +3,7 @@ apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
   name: flux
-  namespace: flux
+  namespace: default
   annotations:
     flux.weave.works/automated: 'true'
 spec:
@@ -13,6 +13,9 @@ spec:
     name: flux
     version: 0.9.4
   values:
+    image:
+      repository: docker.io/weaveworks/flux
+      tag: 1.12.2
     git:
       url: git@github.com:mhutter/flux-hnetes.git
     helmOperator:

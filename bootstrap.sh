@@ -6,7 +6,7 @@ function kapply {
 }
 
 export TILLER_NAMESPACE=kube-system
-export FLUX_FORWARD_NAMESPACE=flux
+export FLUX_FORWARD_NAMESPACE=default
 export GIT_REPO='git@github.com:mhutter/flux-hnetes.git'
 
 kapply create namespace "$TILLER_NAMESPACE"
