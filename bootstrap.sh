@@ -6,7 +6,7 @@ function kapply {
 }
 
 export TILLER_NAMESPACE=kube-system
-export FLUX_FORWARD_NAMESPACE=default
+export FLUX_FORWARD_NAMESPACE=flux
 export GIT_REPO='git@github.com:mhutter/flux-hnetes.git'
 
 kapply create namespace "$TILLER_NAMESPACE"
@@ -22,13 +22,12 @@ helm init \
 helm repo add weaveworks https://weaveworks.github.io/flux
 helm repo update
 
-kubectl apply -f https://raw.githubusercontent.com/weaveworks/flux/master/deploy-helm/flux-helm-release-crd.yaml
-helm upgrade --install flux weaveworks/flux \
+helm install weaveworks/flux \
+  --name flux \
   --set helmOperator.create=true \
-  --set helmOperator.createCRD=false \
-  --set helmOperator.tillerNamespace=$TILLER_NAMESPACE \
-  --set git.url=$GIT_REPO \
-  --namespace $FLUX_FORWARD_NAMESPACE \
+  --set helmOperator.tillerNamespace="$TILLER_NAMESPACE" \
+  --set git.url="$GIT_REPO" \
+  --namespace "$FLUX_FORWARD_NAMESPACE" \
   --wait
 
 if hash fluxctl 2>/dev/null; then
