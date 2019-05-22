@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    field.cattle.io/projectId: c-zsslc:p-rrkxx
+  labels:
+    field.cattle.io/projectId: p-rrkxx
+    certmanager.k8s.io/disable-validation: "true"
+  name: cert-manager
