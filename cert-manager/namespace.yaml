@@ -4,6 +4,7 @@ kind: Namespace
 metadata:
   annotations:
     field.cattle.io/projectId: c-zsslc:p-rrkxx
+    linkerd.io/inject: enabled
   labels:
     field.cattle.io/projectId: p-rrkxx
     certmanager.k8s.io/disable-validation: "true"
