@@ -1,0 +1,14 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: sentry
+  namespace: sentry
+spec:
+  releaseName: sentry
+  chart:
+    git: https://github.com/mhutter/charts.git
+    path: incubator/sentry-kubernetes
+    ref: sentry-kubernetes/existing-secret
+  values:
+    existingSecret: sentry-dsn
