@@ -3,8 +3,8 @@ kind: Namespace
 metadata:
   name: flux
   annotations:
-    field.cattle.io/projectId: c-zsslc:p-brs7c
+    field.cattle.io/projectId: c-s9d9l:p-hwlf4
     linkerd.io/inject: enabled
   labels:
-    field.cattle.io/projectId: p-brs7c
+    field.cattle.io/projectId: p-hwlf4
     name: flux

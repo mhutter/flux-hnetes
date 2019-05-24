@@ -3,9 +3,9 @@ apiVersion: v1
 kind: Namespace
 metadata:
   annotations:
-    field.cattle.io/projectId: c-zsslc:p-rrkxx
+    field.cattle.io/projectId: c-s9d9l:p-hwlf4
     linkerd.io/inject: enabled
   labels:
-    field.cattle.io/projectId: p-rrkxx
+    field.cattle.io/projectId: p-hwlf4
     certmanager.k8s.io/disable-validation: "true"
   name: cert-manager
