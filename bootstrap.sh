@@ -17,6 +17,15 @@ helm init \
   --history-max 10 \
   --wait
 
+#
+# Install linkerd
+#
+linkerd check --pre
+linkerd install --proxy-auto-inject | kubectl apply -f-
+
+#
+# Deploy Flux
+#
 helm repo add weaveworks https://weaveworks.github.io/flux
 helm repo update
 helm install weaveworks/flux \
